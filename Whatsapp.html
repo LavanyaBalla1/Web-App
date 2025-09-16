@@ -1,9 +1,48 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>WHATSAPP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        #message {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<h1>An Online Messaging Application</h1>
 <body>
-people should communication with each other
+    <div id="message">Hello, World!</div>
+    <button onclick="changeMessage()">Click Me</button>
+
+    <script>
+        function changeMessage() {
+            document.getElementById('message').innerText = 'Message Changed!';
+        }
+    </script>
 </body>
 </html>
